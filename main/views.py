@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
+# login
 @login_required(login_url='/login')
 def show_main(request):
     mood_entries = MoodEntry.objects.filter(user=request.user)
